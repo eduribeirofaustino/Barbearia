@@ -23,13 +23,23 @@ header {
     height: 70px;
     display: flex;
     flex-direction: row;/* Define direção se é em Linha ou Coluna */
+    position: relative;
+}
+
+#header{
+    display: flex;
+    width: 1500px; 
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 
 #logo {
-    width: 300px;
+    width: 150px;
     color: white;/* Definir a cor da fonte dos textos */
-    font-size: 26px;/* Dfinir o tamanho da fonte */
+    font-size: 30px;/* Dfinir o tamanho da fonte */
     text-transform: uppercase;/* Colocar em letra minusculas */
     display:flex ;/* Tornar os intens internos em flexiveis */
     align-items: center;/* Alinha os itens no centro */
@@ -47,13 +57,12 @@ header {
     display: none;
 }
 
-label[for= 'botao-menu'] {
+label[for='botao-menu'] {
     color: white;
     cursor: pointer;
     display: none;
     position: absolute;
-    left: 20px;
-
+    left: 50px;
 }
 
 nav{
@@ -85,13 +94,17 @@ figure{
     background-position: center center;
     background-repeat:no-repeat;
     background-size: cover;
-    display: flex;
+}
+
+#backgroundfilter {
+    background-color: #223740;
+    width:100%;
+    height: 100%;
+    display:flex ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
-
 .texto-figure-small{
     color: white;
     font-size: 30px;
@@ -119,9 +132,7 @@ main {
     max-width: 1500px;
     height: 500px;
     margin: 0 auto 50px auto;
-    border: 1px solid black;
-    display: flex;
-   
+    border: 1px solid black;   
 }
 
 main > div {
@@ -135,7 +146,7 @@ footer {
     height: 350px;
 }
 
-@media (max-width: 930px) {
+@media(max-width: 930px) {
     nav {
         display: none;
         flex-direction: column;
@@ -147,11 +158,12 @@ footer {
     }
 
     a {
+        padding: 0;
         width: 100px;
         background-color: var(--cor2);
     }
     
-        label[for='botao-menu'] {
+    label[for='botao-menu'] {
         display: block;
     }
 
